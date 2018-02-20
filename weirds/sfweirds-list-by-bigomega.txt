@@ -1,0 +1,21 @@
+Complete list of square-free weirds with given bigomega
+-------------------------------------------------------
+
+sage: sfweird(2)
+Found 0 primitive abundant numbers 0 with small abundance (marked with  *) and 0 weirds
+
+sage: sfweird(3)
+[2, 5, 7] [1, 1, -1]  *
+Found 1 primitive abundant numbers 1 with small abundance (marked with  *) and 1 weirds
+
+sage: sfweird(4)
+[2, 5, 11, 53] [1, 1, 1, -1]  *
+[2, 5, 13, 31] [1, 1, 2, -1]  *
+Found 18 primitive abundant numbers 4 with small abundance (marked with  *) and 2 weirds
+
+sage: sfweird(5)
+[2, 5, 11, 59, 647] [1, 1, 1, 1, -1]  *
+Found 610 primitive abundant numbers 24 with small abundance (marked with  *) and 1 weirds
+
+sage: sfweird(6)
+Found 216054 primitive abundant numbers 4052 with small abundance (marked with  *) and 0 weirds

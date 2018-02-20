@@ -1,0 +1,22 @@
+Complete list of weirds with given bigomega and at least a square odd factor
+----------------------------------------------------------------------------
+
+sage: pan_bigomega(3, method="weird", onlynsfo=True)
+Found 0 primitive abundants numbers 0 with small abundance (marked with  *) and 0 weirds
+
+sage: pan_bigomega(4, method="weird", onlynsfo=True)
+Found 2 primitive abundants numbers 1 with small abundance (marked with  *) and 0 weirds
+
+sage: pan_bigomega(5, method="weird", onlynsfo=True)
+Found 63 primitive abundants numbers 7 with small abundance (marked with  *) and 0 weirds
+
+sage: pan_bigomega(6, method="weird", onlynsfo=True)
+Found 4814 primitive abundants numbers 102 with small abundance (marked with  *) and 0 weirds
+
+sage: pan_bigomega(7, method="weird", onlynsfo=True)
+[2, 2, 13, 13, 19, 383, 23203] [1, None, 2, None, 1, 2, -1]  * 
+[2, 2, 13, 17, 443, 443, 194867] [1, None, 2, 1, 1, None, -6]  * 
+[2, 5, 5, 29, 37, 137, 211] [1, 1, None, 4, 3, 11, -1]  * 
+[2, 5, 11, 11, 103, 877, 2376097] [1, 1, 1, None, 3, 1, -1]  * 
+[2, 5, 11, 127, 127, 167, 223] [1, 1, 1, 15, None, 15, -1]  * 
+Found 4957037 primitive abundants numbers 14247 with small abundance (marked with  *) and 5 weirds

@@ -1,0 +1,36 @@
+
+# This is an interface for the libprimecount library (https://github.com/kimwalisch/primecount).
+# You need to compile the libprimecount library from the sources with the command
+#   cmake -DBUILD_SHARED_LIBS=ON .
+# Please do not enable MPI since it does not work with this Python interface.
+
+# distutils: language=c++
+# distutils: libraries=primecount
+
+from libcpp.string cimport string
+from libc.stdint cimport int64_t
+
+cdef extern from "primecount.hpp" namespace "primecount":
+    int64_t pi(int64_t n)
+    string pi(const string& n)
+
+def prime_pi_kimwalisch(int64_t n):
+    """
+    Counts the  number of prime less or equal than n, using the shared library primecount.
+
+    INPUT:
+
+    * "n" - integer < 2^63
+    """
+    return pi(n)
+
+def prime_pi_kimwalisch_string(n):
+    """
+    Counts the  number of prime less or equal than n, using the shared library primecount.
+    It is slightly less efficient than prime_pi_kimwalisch but accept bigger inputs.
+
+    INPUT:
+
+    * "n" - integer <= 10^31
+    """
+    return int(pi(<string&> str(n)))
