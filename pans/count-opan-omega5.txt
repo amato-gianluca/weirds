@@ -1,0 +1,18 @@
+sage: count_opan(5)
+Bigomega:  5  count:  87  total:  87
+Bigomega:  6  count:  1580  total:  1667
+Bigomega:  7  count:  1819  total:  3486
+Bigomega:  8  count:  6323  total:  9809
+Bigomega:  9  count:  44089  total:  53898
+Bigomega:  10  count:  42868  total:  96766
+Bigomega:  11  count:  37500  total:  134266
+Bigomega:  12  count:  59759  total:  194025
+Bigomega:  13  count:  123578  total:  317603
+Bigomega:  14  count:  69799  total:  387402
+Bigomega:  15  count:  98575  total:  485977
+Bigomega:  16  count:  108213  total:  594190
+Bigomega:  17  count:  2521178  total:  3115368
+Bigomega:  18  count:  206246  total:  3321614
+Bigomega:  19  count:  122496  total:  3444110
+Bigomega:  20  count:  152365  total:  3596475
+.... interrupted .....

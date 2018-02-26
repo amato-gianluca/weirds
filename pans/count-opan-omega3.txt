@@ -1,0 +1,7 @@
+sage: count_opan(3)
+Bigomega:  3  count:  0  total:  0
+Bigomega:  4  count:  0  total:  0
+Bigomega:  5  count:  3  total:  3
+Bigomega:  6  count:  1  total:  4
+Bigomega:  7  count:  0  total:  4
+Bigomega:  8  count:  4  total:  8
