@@ -61,7 +61,7 @@ def is_sumof_subset(n, setnum, maxnum):
     if is_sumof_subset(n - setnum[maxnum-1], setnum, maxnum-1):
         return True
     return is_sumof_subset(n, setnum, maxnum-1)
- 
+
 def sigma(n, k = 1, f = None):
     """
     Computes the sum of (the k-th powers of) the divisors of n.
@@ -645,7 +645,7 @@ def pan_bigomega(bigomega, firstm = 1, firstp = 2, a = None, alsoperfect = False
             # case when the last prime is repeated
             if prevp > 1 and (omega == None or omega - w == 0):
                 tmp = prevp * sigmaprevpalpha
-                if tmp <= center:
+                if tmp < center or (alsoperfect and tmp == center):
                     # m * prevp is non deficient
                     found = True
                     gamma = sigmam // maxsigmapalpha
@@ -718,7 +718,7 @@ def pan_bigomega(bigomega, firstm = 1, firstp = 2, a = None, alsoperfect = False
                     minval = min(minval, inner_min)
                     p = next_prime(p)
         if j <= verbose:
-            print ps[0:j], count, minval, maxval, found_abundant
+            print ps[0:j], count, minval if minval != +Infinity else "--", maxval if maxval !=0 else "--", found_abundant
         return (count, minval, maxval, found_abundant)
 
     with sage.structure.proof.all.WithProof('arithmetic',proof):
@@ -935,6 +935,9 @@ def runtest():
 
     assert pan_bigomega(5, firstm = 4, onlynsfo=True) == [([2, 2, 11, 11, 23], [1, None, 1, None, -1]),
                                               ([2, 2, 13, 13, 17], [1, None, 2, None, -1]),  ([2, 2, 13, 17, 17], [1, None, 2, 1, None])]
+
+    # This test fails if the stopping condition does not separate the primitive abundant from the abundant case
+    assert pan_bigomega(8, firstm=3*3*5*7*239*239, report="count") == (13, 2473999333155, 3202036752285)
 
     print "Test index functions"
     for (omega, firstm, firstp), res in sfpan_params:
