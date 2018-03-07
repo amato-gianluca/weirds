@@ -2,7 +2,7 @@
 
 Counts and lists of primitive abundant numbers. File with extension `.xz` are compressed in the [Xz format](https://en.wikipedia.org/wiki/Xz).
 
-1. `count-opan-bigomega<n>.txt`: number of odd PANs with *n* prime factors, counted with multiplicities. Each line of the file has the form `[p1, ..., pn] c min max found` meaning that there are `m` odd PANs whose factorization start with `p1 ... pn`. `min` and `max` are the minimum and maximum values respectively of these PANs, and `found` is `True` when there is at least an abundant number, not necessarily primitive abundant, starting with [p1,...., pn].
+1. `count-opan-bigomega<n>.txt`: number of odd PANs with *n* prime factors, counted with multiplicities. Each line of the file has the form `[p1, ..., pn] c min max found` meaning that there are `c` odd PANs whose factorization start with `p1 ... pn`. `min` and `max` are the minimum and maximum values respectively of these PANs, and `found` is `True` when there is at least an abundant number, not necessarily primitive abundant, starting with [p1,...., pn].
 2. `count-pan-bigomega<n>.txt`: like 1, but for all PANs, both odd and even.
 3. `count-sfopan-bigomega<n>.txt`: similar to 1, but for square-free odd PANs. Each line has the form `[p1, ..., pn] c`, where `c` is the number of odd square-free PANs starting with `p1 ... pn`.
 4. `count-sfpan-bigomega<n>.txt`: like 3, but for square-free PANs, both odd and even.
